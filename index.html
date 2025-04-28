@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerenciador de Produtos - Azure Storage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Gerenciador de Produtos</h1>
+
+    <div id="statusMessage" class="status-message"></div>
+
+    <button id="addProductBtn">Adicionar Produto</button>
+
+    <table id="productTable">
+        <thead>
+            <tr>
+                <th>SKU</th>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Última Atualização</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="productTableBody">
+            <!-- Produtos aparecerão aqui -->
+        </tbody>
+    </table>
+
+    <div id="productFormContainer" class="form-container">
+        <h2 id="formTitle">Adicionar Produto</h2>
+        <form id="productForm">
+            <input type="hidden" id="productId">
+            <label>SKU: <input type="text" id="sku" required></label>
+            <label>Nome: <input type="text" id="name" required></label>
+            <label>Descrição: <input type="text" id="description"></label>
+            <label>Preço: <input type="number" id="price" step="0.01" required></label>
+            <div class="form-buttons">
+                <button type="submit">Salvar</button>
+                <button type="button" id="cancelBtn">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
