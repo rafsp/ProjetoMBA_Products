@@ -61,4 +61,4 @@ jobs:
           app-name: 'mbafiap'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AC5B5E79DC694D50B6EB7A277FA68A8F }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D2633C00F4A448D582C0517139D48D35 }}
