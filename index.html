@@ -6,11 +6,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<div class="container">
+
+    <div class="menu">
+        <a href="index.html" class="active">Cadastro de Produtos</a>
+        <a href="consulta2.html">Busca Inteligente</a>
+    </div>
+
     <h1>Gerenciador de Produtos</h1>
 
     <div id="statusMessage" class="status-message"></div>
 
-    <button id="addProductBtn">Adicionar Produto</button>
+    <button id="addProductBtn" class="btn-primary">Adicionar Produto</button>
 
     <table id="productTable">
         <thead>
@@ -27,21 +35,33 @@
         </tbody>
     </table>
 
-    <div id="productFormContainer" class="form-container">
+    <div id="productFormContainer" class="form-container" style="display:none;">
         <h2 id="formTitle">Adicionar Produto</h2>
         <form id="productForm">
             <input type="hidden" id="productId">
-            <label>SKU: <input type="text" id="sku" required></label>
-            <label>Nome: <input type="text" id="name" required></label>
-            <label>Descrição: <input type="text" id="description"></label>
-            <label>Preço: <input type="number" id="price" step="0.01" required></label>
+
+            <label for="sku">SKU:</label>
+            <input type="text" id="sku" required>
+
+            <label for="name">Nome:</label>
+            <input type="text" id="name" required>
+
+            <label for="description">Descrição:</label>
+            <input type="text" id="description">
+
+            <label for="price">Preço:</label>
+            <input type="number" id="price" step="0.01" required>
+
             <div class="form-buttons">
-                <button type="submit">Salvar</button>
-                <button type="button" id="cancelBtn">Cancelar</button>
+                <button type="submit" class="btn-primary">Salvar</button>
+                <button type="button" id="cancelBtn" class="btn-secondary">Cancelar</button>
             </div>
         </form>
     </div>
 
-    <script src="script.js"></script>
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
